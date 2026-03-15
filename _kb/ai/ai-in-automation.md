@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Automation"
 domain: ai
 description: "How AI powers automation and intelligent workflows."
 date: 2026-03-15
+category: ai
+slug: ai-in-automation
+permalink: /ai/ai-in-automation/
 ---
 
 # AI in Automation

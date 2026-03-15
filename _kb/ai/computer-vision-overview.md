@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Computer Vision Overview"
 domain: ai
 description: "How AI systems interpret images and visual data."
 date: 2026-03-15
+category: ai
+slug: computer-vision-overview
+permalink: /ai/computer-vision-overview/
 ---
 
 # Computer Vision Overview

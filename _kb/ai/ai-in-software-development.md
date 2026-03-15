@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Software Development"
 domain: ai
 description: "How AI is changing programming workflows."
 date: 2026-03-15
+category: ai
+slug: ai-in-software-development
+permalink: /ai/ai-in-software-development/
 ---
 
 # AI in Software Development

@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Prompt Engineering Basics"
 domain: ai
 description: "Techniques for interacting with AI systems effectively."
 date: 2026-03-15
+category: ai
+slug: prompt-engineering-basics
+permalink: /ai/prompt-engineering-basics/
 ---
 
 # Prompt Engineering Basics

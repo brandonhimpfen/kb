@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "The Future of Artificial Intelligence"
 domain: ai
 description: "Emerging trends and directions for AI technology."
 date: 2026-03-15
+category: ai
+slug: future-of-ai
+permalink: /ai/future-of-ai/
 ---
 
 # The Future of Artificial Intelligence

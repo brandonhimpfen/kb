@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Healthcare"
 domain: ai
 description: "How AI supports diagnostics and medical research."
 date: 2026-03-15
+category: ai
+slug: ai-in-healthcare
+permalink: /ai/ai-in-healthcare/
 ---
 
 # AI in Healthcare

@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Bias in AI Systems"
 domain: ai
 description: "Understanding bias and fairness challenges in AI."
 date: 2026-03-15
+category: ai
+slug: bias-in-ai-systems
+permalink: /ai/bias-in-ai-systems/
 ---
 
 # Bias in AI Systems

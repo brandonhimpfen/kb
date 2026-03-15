@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Data Analysis"
 domain: ai
 description: "Using AI to extract insights from large datasets."
 date: 2026-03-15
+category: ai
+slug: ai-in-data-analysis
+permalink: /ai/ai-in-data-analysis/
 ---
 
 # AI in Data Analysis

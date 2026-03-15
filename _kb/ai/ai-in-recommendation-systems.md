@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Recommendation Systems"
 domain: ai
 description: "How recommendation algorithms work."
 date: 2026-03-15
+category: ai
+slug: ai-in-recommendation-systems
+permalink: /ai/ai-in-recommendation-systems/
 ---
 
 # AI in Recommendation Systems

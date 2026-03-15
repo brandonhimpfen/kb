@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Training AI Models"
 domain: ai
 description: "How datasets and algorithms are used to train models."
 date: 2026-03-15
+category: ai
+slug: training-ai-models
+permalink: /ai/training-ai-models/
 ---
 
 # Training AI Models

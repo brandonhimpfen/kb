@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI Model Evaluation"
 domain: ai
 description: "Metrics and techniques used to evaluate AI models."
 date: 2026-03-15
+category: ai
+slug: ai-model-evaluation
+permalink: /ai/ai-model-evaluation/
 ---
 
 # AI Model Evaluation

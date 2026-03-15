@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Search Systems"
 domain: ai
 description: "How AI improves search and information retrieval."
 date: 2026-03-15
+category: ai
+slug: ai-in-search-systems
+permalink: /ai/ai-in-search-systems/
 ---
 
 # AI in Search Systems

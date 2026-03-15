@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Datasets in Artificial Intelligence"
 domain: ai
 description: "The importance of data in AI development."
 date: 2026-03-15
+category: ai
+slug: datasets-in-ai
+permalink: /ai/datasets-in-ai/
 ---
 
 # Datasets in Artificial Intelligence

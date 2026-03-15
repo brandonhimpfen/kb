@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Reinforcement Learning Explained"
 domain: ai
 description: "How agents learn through rewards and penalties."
 date: 2026-03-15
+category: ai
+slug: reinforcement-learning-explained
+permalink: /ai/reinforcement-learning-explained/
 ---
 
 # Reinforcement Learning Explained

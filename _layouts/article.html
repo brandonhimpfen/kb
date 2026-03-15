@@ -6,7 +6,11 @@ layout: default
   <header class="article-head">
     <div class="kicker">
       {% assign cat = site.data.categories | where: "key", page.category | first %}
-      <a class="pill" href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ cat.title | default: page.category }}</a>
+      {% if page.domain == "travel" and page.category %}
+        <a class="pill" href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ cat.title | default: page.category }}</a>
+      {% elsif page.domain %}
+        <span class="pill">{{ page.domain | replace: '-', ' ' | capitalize }}</span>
+      {% endif %}
       {% if page.last_reviewed %}<span class="muted">Last reviewed: {{ page.last_reviewed }}</span>{% endif %}
     </div>
 

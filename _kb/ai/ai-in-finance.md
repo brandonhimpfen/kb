@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Finance"
 domain: ai
 description: "AI applications in financial systems and markets."
 date: 2026-03-15
+category: ai
+slug: ai-in-finance
+permalink: /ai/ai-in-finance/
 ---
 
 # AI in Finance

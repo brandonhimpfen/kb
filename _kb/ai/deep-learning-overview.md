@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Deep Learning Overview"
 domain: ai
 description: "Understanding neural networks and deep learning systems."
 date: 2026-03-15
+category: ai
+slug: deep-learning-overview
+permalink: /ai/deep-learning-overview/
 ---
 
 # Deep Learning Overview

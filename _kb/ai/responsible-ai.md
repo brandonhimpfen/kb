@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Responsible AI"
 domain: ai
 description: "Principles and practices for responsible AI development."
 date: 2026-03-15
+category: ai
+slug: responsible-ai
+permalink: /ai/responsible-ai/
 ---
 
 # Responsible AI

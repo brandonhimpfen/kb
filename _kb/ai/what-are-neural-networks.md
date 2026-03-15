@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "What Are Neural Networks"
 domain: ai
 description: "Structure and function of artificial neural networks."
 date: 2026-03-15
+category: ai
+slug: what-are-neural-networks
+permalink: /ai/what-are-neural-networks/
 ---
 
 # What Are Neural Networks

@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI in Cybersecurity"
 domain: ai
 description: "Applications of AI in detecting and preventing cyber threats."
 date: 2026-03-15
+category: ai
+slug: ai-in-cybersecurity
+permalink: /ai/ai-in-cybersecurity/
 ---
 
 # AI in Cybersecurity

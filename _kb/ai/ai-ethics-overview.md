@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "AI Ethics Overview"
 domain: ai
 description: "Key ethical questions surrounding AI technologies."
 date: 2026-03-15
+category: ai
+slug: ai-ethics-overview
+permalink: /ai/ai-ethics-overview/
 ---
 
 # AI Ethics Overview

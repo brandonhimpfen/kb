@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Natural Language Processing Basics"
 domain: ai
 description: "How computers understand and generate language."
 date: 2026-03-15
+category: ai
+slug: natural-language-processing-basics
+permalink: /ai/natural-language-processing-basics/
 ---
 
 # Natural Language Processing Basics

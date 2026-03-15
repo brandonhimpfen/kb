@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Machine Learning Explained"
 domain: ai
 description: "Introduction to machine learning and how systems learn from data."
 date: 2026-03-15
+category: ai
+slug: machine-learning-explained
+permalink: /ai/machine-learning-explained/
 ---
 
 # Machine Learning Explained

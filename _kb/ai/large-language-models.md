@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Large Language Models"
 domain: ai
 description: "How modern language models work."
 date: 2026-03-15
+category: ai
+slug: large-language-models
+permalink: /ai/large-language-models/
 ---
 
 # Large Language Models

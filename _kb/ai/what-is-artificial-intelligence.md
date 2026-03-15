@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "What Is Artificial Intelligence"
 domain: ai
 description: "Overview of artificial intelligence, how it works, and where it is used."
 date: 2026-03-15
+category: ai
+slug: what-is-artificial-intelligence
+permalink: /ai/what-is-artificial-intelligence/
 ---
 
 # What Is Artificial Intelligence

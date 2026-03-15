@@ -1,9 +1,12 @@
 ---
-layout: kb
+layout: article
 title: "Supervised vs Unsupervised Learning"
 domain: ai
 description: "Comparison of major machine learning approaches."
 date: 2026-03-15
+category: ai
+slug: supervised-vs-unsupervised-learning
+permalink: /ai/supervised-vs-unsupervised-learning/
 ---
 
 # Supervised vs Unsupervised Learning
