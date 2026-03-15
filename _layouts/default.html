@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <span class="brand-mark">BH</span>
+          <span class="brand-copy">
+            <span class="brand-name">Brandon Himpfen</span>
+            <span class="brand-text">Knowledge Base</span>
+          </span>
+        </a>
+
+        <div class="nav-links">
+          <a class="nav-link{% if page.url == '/' %} is-active{% endif %}" href="{{ '/' | relative_url }}">Domains</a>
+          <a class="nav-link{% if page.url contains '/travel/' %} is-active{% endif %}" href="{{ '/travel/' | relative_url }}">Travel</a>
+          <a class="nav-link{% if page.url contains '/ai/' %} is-active{% endif %}" href="{{ '/ai/' | relative_url }}">AI</a>
+          <a class="nav-link{% if page.url contains '/crypto/' %} is-active{% endif %}" href="{{ '/crypto/' | relative_url }}">Crypto</a>
+          <a class="nav-link{% if page.url contains '/programming/' %} is-active{% endif %}" href="{{ '/programming/' | relative_url }}">Programming</a>
+          <a class="nav-link{% if page.url contains '/digital-nomadism/' %} is-active{% endif %}" href="{{ '/digital-nomadism/' | relative_url }}">Digital Nomadism</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-inner">
+          <h1 class="hero-title">{{ page.hero_title | default: page.title | default: "Brandon Himpfen Knowledge Base" }}</h1>
+          <p class="hero-subtitle">{{ page.hero_subtitle | default: page.description | default: site.description }}</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      {{ content }}
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner footer-grid">
+        <div>
+          <strong>{{ site.title }}</strong>
+          <p class="footer-note">Structured reference pages across travel, AI, crypto, programming, and digital nomadism.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Domains</div>
+          <div class="footer-links">
+            <a href="{{ '/travel/' | relative_url }}">Travel</a>
+            <a href="{{ '/ai/' | relative_url }}">AI</a>
+            <a href="{{ '/crypto/' | relative_url }}">Crypto</a>
+            <a href="{{ '/programming/' | relative_url }}">Programming</a>
+            <a href="{{ '/digital-nomadism/' | relative_url }}">Digital Nomadism</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Elsewhere</div>
+          <div class="footer-links">
+            <a href="https://www.himpfen.com/" target="_blank" rel="noopener">himpfen.com</a>
+            <a href="https://tools.himpfen.com/" target="_blank" rel="noopener">Tools</a>
+            <a href="https://pages.himpfen.com/" target="_blank" rel="noopener">Pages</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ '/assets/js/kb.js' | relative_url }}"></script>
+  </body>
+</html>

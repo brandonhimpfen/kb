@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<article class="article">
+  <header class="article-head">
+    <div class="kicker">
+      {% assign cat = site.data.categories | where: "key", page.category | first %}
+      <a class="pill" href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ cat.title | default: page.category }}</a>
+      {% if page.last_reviewed %}<span class="muted">Last reviewed: {{ page.last_reviewed }}</span>{% endif %}
+    </div>
+
+    <h2 class="article-title">{{ page.title }}</h2>
+    {% if page.description %}<p class="article-desc">{{ page.description }}</p>{% endif %}
+  </header>
+
+  {% if page.how_to_read %}
+  <section class="callout">
+    <h3>How to read this</h3>
+    <ul>
+      {% for item in page.how_to_read %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.scope %}
+  <section class="grid-2">
+    <div class="card">
+      <h3>Scope</h3>
+      <p class="muted">{{ page.scope }}</p>
+    </div>
+    <div class="card">
+      <h3>What this page does not do</h3>
+      <ul class="tight">
+        {% if page.not_do %}
+          {% for item in page.not_do %}<li>{{ item }}</li>{% endfor %}
+        {% else %}
+          <li>It does not replace official rules or provider policies.</li>
+          <li>It does not guarantee outcomes.</li>
+          <li>It does not optimize for deals or promotions.</li>
+        {% endif %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="article-body">
+    {{ content }}
+  </section>
+
+  {% if page.related %}
+  <section class="related">
+    <h3>Related</h3>
+    <div class="related-grid">
+      {% for r in page.related %}
+        {% assign doc = site.kb | where: "slug", r | first %}
+        {% if doc %}
+          <a class="related-card" href="{{ doc.url | relative_url }}">
+            <div class="related-title">{{ doc.title }}</div>
+            <div class="related-desc">{{ doc.description }}</div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>

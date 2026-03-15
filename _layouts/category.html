@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% assign cat = site.data.categories | where: "key", page.category_key | first %}
+
+<div class="section-head">
+  <h2 class="section-title">{{ cat.title }}</h2>
+  <p class="section-subtitle">{{ cat.description }}</p>
+</div>
+
+<div class="kb-grid">
+  {% assign items = site.kb | where: "category", page.category_key | sort: "title" %}
+  {% for post in items %}
+    <a class="kb-card" href="{{ post.url | relative_url }}">
+      <div class="kb-card-top">
+        <div class="kb-card-title">{{ post.title }}</div>
+        <span class="pill">{{ cat.title }}</span>
+      </div>
+      <div class="kb-card-desc">{{ post.description }}</div>
+      <div class="kb-card-meta">Last reviewed: {{ post.last_reviewed | default: "—" }}</div>
+    </a>
+  {% endfor %}
+</div>

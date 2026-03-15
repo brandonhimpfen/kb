@@ -1,0 +1,22 @@
+title: Brandon Himpfen
+description: A structured knowledge base for travel, AI, crypto, programming, and
+  digital nomadism.
+url: https://kb.himpfen.com
+baseurl: ''
+permalink: pretty
+collections:
+  kb:
+    output: true
+    permalink: /:name/
+defaults:
+- scope:
+    path: ''
+    type: kb
+  values:
+    layout: article
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude:
+- README.md
