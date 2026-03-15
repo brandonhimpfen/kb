@@ -34,8 +34,8 @@ hero_subtitle: A structured reference layer for the main domains across Brandon 
   <a class="domain-card" href="{{ '/crypto/' | relative_url }}">
     <div class="domain-title">Crypto</div>
     <div class="domain-desc">A home for cryptocurrency and digital asset explainers, reference pages, and future infrastructure-oriented knowledge resources.</div>
-    <div class="domain-meta">{% if crypto_posts | size > 0 %}Current KB articles: {{ crypto_posts | size }}{% else %}Planned domain{% endif %}</div>
-    <span class="button-link{% if crypto_posts | size == 0 %} secondary{% endif %}">{% if crypto_posts | size > 0 %}Open crypto domain{% else %}View domain{% endif %}</span>
+    <div class="domain-meta">Current KB articles: {{ crypto_posts | size }}</div>
+    <span class="button-link">Open Crypto domain</span>
   </a>
 
   <a class="domain-card" href="{{ '/programming/' | relative_url }}">
