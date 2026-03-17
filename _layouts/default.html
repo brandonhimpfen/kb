@@ -4,68 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines }}">
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/kb-bridge.css' | relative_url }}">
-  <style>
-    .site-shell main.container{padding-top:2rem;padding-bottom:3rem}
-    .site-header .container{max-width:1140px}
-    .site-footer .container{max-width:1140px}
-    .brand-mark{display:none}
-    .brand-copy{display:inline}
-    .brand-name{display:none}
-    .brand-text{display:inline;font-size:1rem;font-weight:800;letter-spacing:-.03em}
-    .hero{display:none}
-    .footer{display:none}
-    .nav,.nav-links,.brand{all:unset}
-    .kb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
-    .kb-card,.domain-card,.cat-card,.card,.empty-state,.callout,.related-card{
-      background:linear-gradient(180deg,#ffffff 0%,#fcfeff 100%);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow-sm);
-    }
-    .kb-card,.domain-card,.cat-card,.card,.empty-state,.callout,.related-card{padding:1.25rem}
-    .kb-card:hover,.domain-card:hover,.cat-card:hover,.related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(0,119,182,.22)}
-    .section-head,.article-head{margin-bottom:1.5rem}
-    .section-title,.article-title{font-size:clamp(1.75rem,2vw,2.4rem);font-weight:800;letter-spacing:-.04em;line-height:1.08;margin:0 0 .5rem}
-    .section-subtitle,.article-desc,.muted,.kb-card-desc,.domain-desc,.cat-desc,.empty-state{color:var(--muted)}
-    .domain-grid,.cat-grid,.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
-    .domain-title,.cat-title,.related-title,.kb-card-title{font-size:1.05rem;font-weight:800;letter-spacing:-.02em}
-    .domain-meta,.cat-meta,.kb-card-meta{font-size:.92rem;color:var(--muted);margin-top:.5rem}
-    .button-link{display:inline-flex;margin-top:1rem;color:var(--brand);font-weight:700}
-    .button-link.secondary{opacity:.8}
-    .library-controls{display:flex;justify-content:space-between;gap:1rem;align-items:center;margin-bottom:1rem}
-    .library-controls-left{display:flex;align-items:center;gap:.75rem;flex:1}
-    .library-controls-right{display:flex;align-items:center}
-    .library-search,.select{border-color:var(--border);padding:.82rem .95rem;border-radius:.95rem;background:#fff;box-shadow:none}
-    .library-search{width:100%;max-width:100%}
-    .library-count{color:var(--muted);font-size:.92rem;white-space:nowrap}
-    .kicker{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem}
-    .pill{display:inline-flex;align-items:center;padding:.4rem .7rem;border-radius:999px;background:var(--brand-soft);border:1px solid rgba(0,119,182,.16);color:var(--brand);font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-    .article{max-width:900px}
-    .article-body{font-size:1.04rem}
-    .article-body h2,.article-body h3,.article-body h4{letter-spacing:-.03em;margin-top:1.5rem}
-    .article-body p,.article-body li{color:#334155}
-    .article-body a{color:var(--brand)}
-    .article-body ul,.article-body ol{padding-left:1.2rem}
-    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-    .tight{margin:0;padding-left:1.1rem}.tight li+li{margin-top:.45rem}
-    .callout{margin:1.25rem 0}
-    .related{margin-top:2rem}
-    .related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .section-spacer{margin-top:1.25rem}
-    .sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media (max-width: 991.98px){.kb-grid,.domain-grid,.cat-grid,.related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width: 767.98px){.kb-grid,.domain-grid,.cat-grid,.related-grid,.grid-2{grid-template-columns:1fr}.library-controls,.library-controls-left{flex-direction:column;align-items:stretch}.site-shell main.container{padding-top:1.25rem}}
-  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FCT43J2VW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6FCT43J2VW');
+  </script>
 </head>
-<body class="site-shell">
+<body>
   <header class="site-header border-bottom sticky-top">
     <nav class="navbar navbar-expand-lg py-3">
       <div class="container">
@@ -76,7 +31,8 @@
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2 align-items-lg-center">
             <li class="nav-item"><a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Domains</a></li>
-            <li class="nav-item"><a class="nav-link{% if page.url contains '/travel/' or page.url contains '/category/' or page.url == '/categories/' %} active{% endif %}" href="{{ '/travel/' | relative_url }}">Travel</a></li>
+            <li class="nav-item"><a class="nav-link{% if page.url contains '/travel/' or page.url contains '/category/' %} active{% endif %}" href="{{ '/travel/' | relative_url }}">Travel</a></li>
+            <li class="nav-item"><a class="nav-link{% if page.url contains '/categories/' %} active{% endif %}" href="{{ '/categories/' | relative_url }}">Categories</a></li>
             <li class="nav-item"><a class="nav-link{% if page.url contains '/ai/' %} active{% endif %}" href="{{ '/ai/' | relative_url }}">AI</a></li>
             <li class="nav-item"><a class="nav-link{% if page.url contains '/crypto/' %} active{% endif %}" href="{{ '/crypto/' | relative_url }}">Crypto</a></li>
             <li class="nav-item"><a class="nav-link{% if page.url contains '/programming/' %} active{% endif %}" href="{{ '/programming/' | relative_url }}">Programming</a></li>
@@ -87,7 +43,7 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main>
     {{ content }}
   </main>
 
@@ -96,31 +52,32 @@
       <div class="row g-4">
         <div class="col-lg-4">
           <h2 class="h5 mb-3">Brandon Himpfen Knowledge Base</h2>
-          <p class="text-secondary mb-0">Structured reference pages across travel, AI, crypto, programming, and digital nomadism.</p>
+          <p class="text-secondary mb-0">Structured reference pages across travel, artificial intelligence, crypto, programming, and digital nomadism.</p>
         </div>
         <div class="col-6 col-lg-3">
           <h3 class="h6 text-uppercase footer-heading">Domains</h3>
           <ul class="list-unstyled footer-links mb-0">
             <li><a href="{{ '/travel/' | relative_url }}">Travel</a></li>
-            <li><a href="{{ '/ai/' | relative_url }}">AI</a></li>
+            <li><a href="{{ '/ai/' | relative_url }}">Artificial Intelligence</a></li>
             <li><a href="{{ '/crypto/' | relative_url }}">Crypto</a></li>
             <li><a href="{{ '/programming/' | relative_url }}">Programming</a></li>
             <li><a href="{{ '/digital-nomadism/' | relative_url }}">Digital Nomadism</a></li>
           </ul>
         </div>
         <div class="col-6 col-lg-3">
-          <h3 class="h6 text-uppercase footer-heading">Browse</h3>
+          <h3 class="h6 text-uppercase footer-heading">Travel Reference</h3>
           <ul class="list-unstyled footer-links mb-0">
-            <li><a href="{{ '/' | relative_url }}">Domains</a></li>
             <li><a href="{{ '/categories/' | relative_url }}">Travel Categories</a></li>
+            {% for c in site.data.categories limit:4 %}
+            <li><a href="{{ '/category/' | append: c.key | append: '/' | relative_url }}">{{ c.title }}</a></li>
+            {% endfor %}
           </ul>
         </div>
         <div class="col-lg-2">
-          <h3 class="h6 text-uppercase footer-heading">Elsewhere</h3>
+          <h3 class="h6 text-uppercase footer-heading">Site</h3>
           <ul class="list-unstyled footer-links mb-0">
+            <li><a href="{{ '/' | relative_url }}">Domains</a></li>
             <li><a href="https://www.himpfen.com/" target="_blank" rel="noopener">himpfen.com</a></li>
-            <li><a href="https://tools.himpfen.com/" target="_blank" rel="noopener">Tools</a></li>
-            <li><a href="https://pages.himpfen.com/" target="_blank" rel="noopener">Pages</a></li>
           </ul>
         </div>
       </div>
