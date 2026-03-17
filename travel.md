@@ -1,4 +1,3 @@
-
 ---
 title: Travel
 description: Travel knowledge covering pricing, safety, mobility, accommodation, planning, and solo travel systems.

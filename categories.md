@@ -1,4 +1,3 @@
-
 ---
 title: Travel Categories
 description: Browse travel knowledge base articles by category.
