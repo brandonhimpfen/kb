@@ -65,8 +65,16 @@ a:hover { color: var(--brand); }
 .footer-links a:hover { color: var(--brand-dark); }
 
 .container { max-width: 1180px; }
-.section-head, .library-controls, .domain-grid, .cat-grid, .kb-grid, .article { margin-left: auto; margin-right: auto; }
-.section-head, .library-controls, .domain-grid, .cat-grid, .kb-grid, .article, .empty-state { max-width: 1180px; }
+.section-head, .library-controls, .domain-grid, .cat-grid, .kb-grid, .article, .empty-state {
+  width: min(1180px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid-2.section-spacer {
+  width: min(1180px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+}
 .section-head { padding: 2rem 0 0.75rem; }
 .section-title, .article-title, .domain-title, .cat-title, .kb-card-title, .related-title {
   letter-spacing: -0.04em;
@@ -193,6 +201,7 @@ a:hover { color: var(--brand); }
 
 .card {
   padding: 1.35rem;
+  min-width: 0;
 }
 .card h3, .callout h3, .related h3 {
   margin: 0 0 0.6rem;
