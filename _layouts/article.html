@@ -1,21 +1,20 @@
-
 ---
 layout: default
 ---
 
 <article class="article">
   <header class="article-head">
-    <div class="kicker mb-3">
+    <div class="kicker">
       {% assign cat = site.data.categories | where: "key", page.category | first %}
       {% if page.domain == "travel" and page.category %}
         <a class="pill" href="{{ '/category/' | append: page.category | append: '/' | relative_url }}">{{ cat.title | default: page.category }}</a>
       {% elsif page.domain %}
         <span class="pill">{{ page.domain | replace: '-', ' ' | capitalize }}</span>
       {% endif %}
-      {% if page.last_reviewed %}<span class="text-secondary small fw-medium">Last reviewed: {{ page.last_reviewed }}</span>{% endif %}
+      {% if page.last_reviewed %}<span class="muted">Last reviewed: {{ page.last_reviewed }}</span>{% endif %}
     </div>
 
-    <h1 class="article-title">{{ page.title }}</h1>
+    <h2 class="article-title">{{ page.title }}</h2>
     {% if page.description %}<p class="article-desc">{{ page.description }}</p>{% endif %}
   </header>
 
@@ -32,7 +31,7 @@ layout: default
   <section class="grid-2">
     <div class="card">
       <h3>Scope</h3>
-      <p class="muted mb-0">{{ page.scope }}</p>
+      <p class="muted">{{ page.scope }}</p>
     </div>
     <div class="card">
       <h3>What this page does not do</h3>
