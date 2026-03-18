@@ -1,7 +1,7 @@
 ---
-title: Domains
+title: Home
 description: Explore structured knowledge across travel, AI, crypto, programming, and digital nomadism.
-hero_title: Domains
+hero_title: Knowledge Base
 hero_subtitle: A structured reference layer for the main domains across Brandon Himpfen's work.
 ---
 
